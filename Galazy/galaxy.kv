@@ -1,0 +1,24 @@
+
+#:import menu menu
+
+MainWidget:
+
+<MainWidget>:
+
+    canvas.before:
+        Rectangle:
+            size: self.size
+            source: "galary/city1.png"
+    menu_widget: menu_widget
+    perspective_point_x: int(self.width / 2 - dp(100))
+    perspective_point_y: self.height * 0.35
+
+    MenuWidget:
+        id: menu_widget
+
+    Label:
+        text: root.score
+        font_color: 1, 1, 1, 1
+        font_size: dp(18)
+        size_hint: .1, .2
+        pos_hint: {'x': 0, "top": 1}
